@@ -7,7 +7,7 @@ export const useViewContext = () => useContext(ViewContext); //management
 
 export const ViewProvider = ({ children }) => {
 
-  const [activeTheme, setActiveTheme] = useState(localStorage.getItem("themess") ? localStorage.getItem("themess") : './portafolio/assets/styles/theme-7.scss'); //themes ? themes :
+  const [activeTheme, setActiveTheme] = useState(localStorage.getItem("themess") ? localStorage.getItem("themess") : '../portafolio/assets/styles/theme-7.scss'); //themes ? themes :
   const [activeLinkId, setActiveLinkId] = useState(sessionStorage.getItem("dir") ? sessionStorage.getItem("dir") : "./portafolio");
   const navigate = useNavigate();
   const location = useLocation();
@@ -35,7 +35,6 @@ export const ViewProvider = ({ children }) => {
     return () => {
         link.remove();
         setActiveLinkId(sessionStorage.getItem("dir"));
-
     };
 }, [ activeTheme ]);
 
