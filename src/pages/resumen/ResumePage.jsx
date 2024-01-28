@@ -3,6 +3,7 @@ import datos from "../../db/resume.json";
 import resumeprofile from "../../assets/images/resume-profile.png";
 
 const { tel, mail, page, dir, pdf } = datos.datos;
+
 export function ResumePage() {
   document.title = "Brandon Rivera - Resumen";
   return (
@@ -15,7 +16,6 @@ export function ResumePage() {
           </a>
         </div>
       </section>
-
       <div className="container resume-container px-3 px-lg-5">
         <article className="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
           <div className="resume-header">

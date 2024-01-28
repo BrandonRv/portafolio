@@ -179,9 +179,9 @@ export function ContactPage() {
                     <i className="fas fa-info-circle me-2 text-primary"></i>
                     ¿Quieres saber más sobre mí? Consulta la{" "}
                     <NavLink
-                      idde="btn-about"
+                      idde="/portafolio"
                       className="text-link"
-                      to="/portfolio"
+                      to="/portafolio"
                       onClick={handleLinkClick}
                       //target="_blank"
                     >

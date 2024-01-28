@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useViewContext } from "../../helpers/ViewProvider";
 import moment from "moment";
 
 export function BlogItem({ datos }) {
   const { title, desc, url, image, date, inter, preview } = datos;
   const myMomentObject = moment(date, "MM-DD-YYYY");
   const dateTimeAgo = myMomentObject.fromNow();
+  const { handleLinkClick } = useViewContext();
 
   return (
     <div className="col-md-6 mb-5">
@@ -27,7 +29,7 @@ export function BlogItem({ datos }) {
           </h5>
           <p className="card-text">{desc}</p>
           <p className="mb-0">
-            <NavLink className="text-link" to="/portfolio/contact">
+            <NavLink idde="/portafolio/contact" className="text-link" to="/portafolio/contact" onClick={handleLinkClick}>
               {inter} &rarr;
             </NavLink>
           </p>

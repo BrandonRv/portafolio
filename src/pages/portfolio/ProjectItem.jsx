@@ -14,7 +14,7 @@ export function ProjectItem({ datos }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/portfolio/project");
+    navigate("/portafolio/project");
   }, [image]);
 
   return (

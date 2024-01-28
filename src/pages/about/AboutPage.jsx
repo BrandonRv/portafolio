@@ -35,14 +35,14 @@ export function AboutPage() {
                 <br />
               </div>
               <div className="mb-3">
-                <NavLink idde="btn-project" className="btn btn-primary me-2 mb-3" onClick={handleLinkClick} to="/portfolio/project"
+                <NavLink idde="/portafolio/project" className="btn btn-primary me-2 mb-3" onClick={handleLinkClick} to="/portafolio/project"
                 >
                   <i className="fas fa-arrow-alt-circle-right me-2"></i>&#160;
                   &#160;
                   <span className="d-none d-md-inline">Ver</span> Portafolio
                 </NavLink>
                 &#160; &#160; &#160; &#160;
-                <NavLink idde="btn-resume" className="btn btn-secondary mb-3" onClick={handleLinkClick} to="/portfolio/resume">
+                <NavLink idde="/portafolio/resume" className="btn btn-secondary mb-3" onClick={handleLinkClick} to="/portafolio/resume">
                   <i className="fas fa-file-alt me-2"></i>&#160; &#160;
                   <span className="d-none d-md-inline">Ver</span> Resumen CV
                 </NavLink>

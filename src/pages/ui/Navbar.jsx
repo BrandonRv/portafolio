@@ -32,7 +32,7 @@ export function Navbar() {
     <header className="header text-center">
       <div className="force-overflow">
         <h1 className="blog-name pt-lg-4 mb-0">
-          <NavLink className="no-text-decoration" to="/portfolio">
+          <NavLink idde="/portafolio" className="no-text-decoration" to="/portafolio" onClick={handleLinkClick}>
             Brandon Rivera
           </NavLink>
         </h1>
@@ -95,11 +95,11 @@ export function Navbar() {
             <ul className="navbar-nav flex-column text-left">
               <li className="nav-item">
                 <NavLink
-                  idde="btn-about"
-                  className={activeLinkId && activeLinkId === "btn-about" ? "" : "nav-link active"}
+                  idde="/portafolio"
+                  className={activeLinkId && activeLinkId && sessionStorage.getItem("dir") && sessionStorage.getItem("dir") == "/portafolio" ? "" : "nav-link active"}
                   //color="gray"
                   onClick={handleLinkClick}
-                  to="/portfolio"
+                  to="/portafolio"
                 >
                   <i className="fas fa-user fa-fw me-2"></i> About Me
                   <span className="sr-only">(current)</span> 
@@ -107,10 +107,10 @@ export function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  idde="btn-project"
-                  className={activeLinkId && activeLinkId === "btn-project" ? "" : "nav-link active"}
+                  idde="/portafolio/project"
+                  className={activeLinkId && activeLinkId && sessionStorage.getItem("dir") && sessionStorage.getItem("dir") == "/portafolio/project" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
-                  to="/portfolio/project"
+                  to="/portafolio/project"
                 >
                   <i className="fas fa-laptop-code fa-fw me-2"></i> Project
                   <span className="sr-only">(current)</span>
@@ -118,10 +118,10 @@ export function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  idde="btn-resume"
-                  className={activeLinkId && activeLinkId === "btn-resume" ? "" : "nav-link active"}
+                  idde="/portafolio/resume"
+                  className={activeLinkId && activeLinkId && sessionStorage.getItem("dir") && sessionStorage.getItem("dir") == "/portafolio/resume" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
-                  to="/portfolio/resume"
+                  to="/portafolio/resume"
                 >
                   <i className="fas fa-file-alt fa-fw me-2"></i> Resumen CV
                   <span className="sr-only">(current)</span>
@@ -129,11 +129,11 @@ export function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  idde="btn-blog"
+                  idde="/portafolio/blog"
                   style={{ padding: "5px", margin: "6px" }}
-                  className={activeLinkId && activeLinkId === "btn-blog" ? "" : "nav-link active"}
+                  className={activeLinkId && activeLinkId && sessionStorage.getItem("dir") && sessionStorage.getItem("dir") == "/portafolio/blog" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
-                  to="/portfolio/blog"
+                  to="/portafolio/blog"
                 >
                   <i className="fas fa-blog fa-fw me-2"></i> Blog
                   <span className="sr-only">(current)</span>
@@ -141,9 +141,9 @@ export function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  idde="btn-contact"
-                  className={activeLinkId && activeLinkId === "btn-contact" ? "" : "nav-link active"}
-                  to="/portfolio/contact"
+                  idde="/portafolio/contact"
+                  className={activeLinkId && activeLinkId && sessionStorage.getItem("dir") && sessionStorage.getItem("dir") == "/portafolio/contact" ? "" : "nav-link active"}
+                  to="/portafolio/contact"
                   onClick={handleLinkClick}
                 >
                   <i className="fas fa-envelope-open-text fa-fw me-2"></i>{" "}
@@ -154,9 +154,9 @@ export function Navbar() {
             </ul>
             <div className="my-2 mt-4">
               <a
-                idde="btn-contact"
+                idde="/portafolio/contact"
                 className="btn btn-primary"
-                onClick={(e) => { handleLinkClick(e); navigate("/portfolio/contact"); }}
+                onClick={(e) => { handleLinkClick(e); navigate("/portafolio/contact"); }}
                 //target="_blank"
               >
                 <i className="fas fa-paper-plane me-2"></i> Escribir

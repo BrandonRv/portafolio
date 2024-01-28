@@ -25,13 +25,13 @@ export function AppRouter() {
         <div className="main-wrapper">
           <ScrollToTop />
           <Routes>
-            <Route path={"/portfolio/project"} element={<PortfolioPage />} />
-            <Route path="portfolio/project/:pageId" element={<ProjectPage />} />
-            <Route path={"/portfolio/resume"} element={<ResumePage />} />
-            <Route path={"/portfolio/blog"} element={<BlogPage />} />
-            <Route path={"/portfolio/contact"} element={<ContactPage />} />
-            <Route path={"/portfolio"} element={<AboutPage />} />
-            <Route path="*" element={<Navigate to={"/portfolio"} replace />} />
+            <Route path={"/portafolio/project"} element={<PortfolioPage />} />
+            <Route path="/portafolio/project/:pageId" element={<ProjectPage />} />
+            <Route path={"/portafolio/resume"} element={<ResumePage />} />
+            <Route path={"/portafolio/blog"} element={<BlogPage />} />
+            <Route path={"/portafolio/contact"} element={<ContactPage />} />
+            <Route path={"/portafolio"} element={<AboutPage />} />
+            <Route path="*" element={<Navigate to={"/portafolio"} replace />} />
           </Routes>
           <Footer />
           <Themes />

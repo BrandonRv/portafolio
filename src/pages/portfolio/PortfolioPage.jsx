@@ -54,9 +54,9 @@ export function PortfolioPage() {
             </p>
           </div>
           <NavLink
-            idde="btn-contact"
+            idde="/portafolio/contact"
             className="btn btn-primary"
-            to="/portfolio/contact"
+            to="/portafolio/contact"
             onClick={handleLinkClick}
             //target="_blank"
           >

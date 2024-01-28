@@ -1,5 +1,5 @@
-import { useLocation } from 'react-router-dom';
-import React, { createContext, useContext, useState } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const ViewContext = createContext();
 
@@ -7,22 +7,18 @@ export const useViewContext = () => useContext(ViewContext); //management
 
 export const ViewProvider = ({ children }) => {
 
-  const [activeLinkId, setActiveLinkId] = useState(sessionStorage.getItem("dir"));
+  const [activeTheme, setActiveTheme] = useState(localStorage.getItem("themess") ? localStorage.getItem("themess") : './portafolio/assets/styles/theme-7.scss'); //themes ? themes :
+  const [activeLinkId, setActiveLinkId] = useState(sessionStorage.getItem("dir") ? sessionStorage.getItem("dir") : "./portafolio");
+  const navigate = useNavigate();
   const location = useLocation();
 
-//   if (location.pathname) {
-//   if (location.pathname === "/portfolio") {
-//     setActiveLinkId("btn-about");
-//   } else if(location.pathname === "/portfolio/project") {
-//     setActiveLinkId("btn-project");
-//   } else if (location.pathname === "/portfolio/resume") {
-//     setActiveLinkId("btn-resume");
-//   } else if (location.pathname === "/portfolio/blog") {
-//     setActiveLinkId("btn-blog");
-//   } else if (location.pathname === "/portfolio/contact") {
-//     setActiveLinkId("btn-contact");
-//   }
-// }
+  const handleThemeClick = async (e) => {
+
+     const newTheme = await e.target.getAttribute('data-style');
+     //setActiveLinkId(sessionStorage.getItem("dir"));
+     setActiveTheme(newTheme);
+     localStorage.setItem("themess", newTheme)
+ };
 
   const handleLinkClick = async (e) => {
     const linkId = await e.target.getAttribute("idde");
@@ -31,9 +27,22 @@ export const ViewProvider = ({ children }) => {
     console.log(location.pathname);
   };
 
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = activeTheme;
+    document.head.appendChild(link);
+    return () => {
+        link.remove();
+        setActiveLinkId(sessionStorage.getItem("dir"));
+
+    };
+}, [ activeTheme ]);
+
 const contextValue = {
   handleLinkClick,
   activeLinkId,
+  handleThemeClick,
 };
 
 return (

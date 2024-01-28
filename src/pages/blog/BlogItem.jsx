@@ -29,7 +29,7 @@ export function BlogItem({ datos }) {
           </h5>
           <p className="card-text">{desc}</p>
           <p className="mb-0">
-            <NavLink idde="btn-contact" className="text-link" to="/portfolio/contact" onClick={handleLinkClick}>
+            <NavLink idde="/portafolio/contact" className="text-link" to="/portafolio/contact" onClick={handleLinkClick}>
               {inter} &rarr;
             </NavLink>
           </p>

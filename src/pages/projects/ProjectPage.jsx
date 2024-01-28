@@ -3,7 +3,7 @@ import { Navigate, useParams } from "react-router-dom";
 import ProjectsData from "../../db/porfolio.json";
 
 export function ProjectPage() {
-  document.title = "Brandon Rivera - Inicio";
+  document.title = "Brandon Rivera - ProjectID";
   let params = useParams();
 
   try {
@@ -19,7 +19,7 @@ export function ProjectPage() {
       <div>
         <section className="cta-section theme-bg-light py-5">
           <div className="container single-col-max-width">
-            <h2 className="heading text-center">Case Study: {client}</h2>
+            <h2 className="heading text-center">Estudio de Caso: {client}</h2>
           </div>
         </section>
 
@@ -42,15 +42,15 @@ export function ProjectPage() {
                     <ul className="client-meta list-unstyled">
                       <li className="mb-2">
                         <i className="fas fa-industry fa-fw me-2"></i>
-                        <strong>Industry:</strong> {Data.industry}
+                        <strong>Compañia:</strong> {Data.industry}
                       </li>
                       <li className="mb-2">
                         <i className="fas fa-users fa-fw me-2"></i>
-                        <strong>Size:</strong> {Data.size}
+                        <strong>Tamaño:</strong> {Data.size}
                       </li>
                       <li className="mb-2">
                         <strong>
-                          <i className="fas fa-link fa-fw me-2"></i>Website:
+                          <i className="fas fa-link fa-fw me-2"></i>Sitio Web:
                         </strong>{" "}
                         {Data.urls.map((data, index) => (
                           <a
@@ -65,7 +65,7 @@ export function ProjectPage() {
                       </li>
                     </ul>
                     <div className="client-bio mb-4">{desc}</div>
-                    <h4 className="subheading mb-3">Project Requirements</h4>
+                    <h4 className="subheading mb-3">Requerimientos</h4>
                     <ul className="mb-0">
                       {Data.requirements.map((data, index) => (
                         <li key={index} className="mb-2">
@@ -79,12 +79,12 @@ export function ProjectPage() {
             </div>
             <div className="project-sections py-5">
               <div className="project-section mb-5">
-                <h3 className="project-section-title mb-3">Project Overview</h3>
+                <h3 className="project-section-title mb-3">Descripción del proyecto</h3>
                 <p>{Data.project_overview}</p>
               </div>
 
               <div className="project-section mb-5">
-                <h3 className="project-section-title">The Challenge</h3>
+                <h3 className="project-section-title">Challenge</h3>
                 {Data.the_challenge.map((data, index) => (
                   <p key={index}>{data}</p>
                 ))}
@@ -92,7 +92,7 @@ export function ProjectPage() {
 
               <div className="project-section mb-5">
                 <h3 className="project-section-title">
-                  The Approach &amp; Solution
+                  Enfoque &amp; Solucion
                 </h3>
                 {Data.the_solution.map((data, index) => (
                   <p key={index}>{data}</p>
@@ -118,7 +118,7 @@ export function ProjectPage() {
               </div>
 
               <div className="project-section mb-5">
-                <h3 className="project-section-title mb-3">The Results</h3>
+                <h3 className="project-section-title mb-3">Resultados</h3>
 
                 <div className="metrics mb-4">
                   <div className="row">
@@ -145,11 +145,9 @@ export function ProjectPage() {
 
         <section className="promo-section theme-bg-light py-5 text-center">
           <div className="container single-col-max-width">
-            <h2 className="title">Do you have any questions to ask me?</h2>
+            <h2 className="title">¿Tienes alguna pregunta que hacerme?</h2>
             <p>
-              If you want to know more about me and my projects or you are
-              interested in talking with me you can contact me through the
-              following link
+              Si quieres saber más sobre mí y mis proyectos o estás interesado en hablar conmigo puedes contactarme a través del siguiente enlace
             </p>
             <div className="text-center">
               <a
@@ -157,7 +155,7 @@ export function ProjectPage() {
                 href="contact.html"
                 target="_blank"
               >
-                <i className="fas fa-paper-plane me-2"></i>Hire Me
+                <i className="fas fa-paper-plane me-2"></i> Escribir
               </a>
             </div>
           </div>
@@ -165,7 +163,7 @@ export function ProjectPage() {
       </div>
     );
   } catch {
-    return <Navigate to={"/portfolio"} replace />;
+    return <Navigate to={"/portafolio"} replace />;
   }
 };
 
