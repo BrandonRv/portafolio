@@ -1,0 +1,19 @@
+{
+    "blogs": [
+        {
+            "title": "¿Cómo reparar un MacBook Air que no da video?",
+            "desc": "Se muestra cómo hacer un cambio de módulos de memoria RAM de una MacBook Air. Se trata de simplificar lo más posible el proceso, que consiste en el desmontaje de componentes defectuosos, el reemplazo por nuevos, la soldadura y las pruebas respectivas de funcionamiento.",
+            "url": "https://www.youtube.com/channel/UCgrE8sm9mUc3h1RK4C06o5w",
+            "image": [
+                "image1",
+                "image2",
+                "image3",
+                "image4",
+                "image5"
+            ],
+            "preview": "https://www.youtube.com/embed/Q7-ImQQ5Mog?si=-KR_jeE-x0cOwa3W",
+            "date": "01-08-2024",
+            "inter": "Me interesa"
+        }
+    ]
+}

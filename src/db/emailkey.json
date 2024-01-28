@@ -1,0 +1,7 @@
+{
+    "emailkey": {
+        "USER_ID": "service_id",
+        "TEMPLATE_ID": "template_id",
+        "PUBLIC_KEY":"pass_public"
+    }
+}

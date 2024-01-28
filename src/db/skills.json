@@ -1,0 +1,50 @@
+{ 
+    "skills": 
+    [
+        {
+            "title": "JavaScript, HTML, CSS & Boostrap", 
+            "desc": ["Datatables, Json, Ajax, Apexcharts, Moment.js, Desarrollo de sitios web responsivos basados ​en HTML, CSS y Boostrap. etc..."],
+            "icons": ["skill-icons:javascript", "skill-icons:html", "skill-icons:css", "logos:bootstrap"]
+        },
+        {
+            "title": "Frontend", 
+            "desc": ["React, React Ruter, Hooks, Context, Animate, Swiper, NextJs, tailwindcss, SASS, Material UI, Sweetalert, Iconify, etc... "],
+            "icons": ["logos:react", "devicon:nextjs", "devicon:tailwindcss", "devicon:sass", "logos:material-ui"]
+        },
+        {
+            "title": "Backend", 
+            "desc": ["PHP, Laravel, MVC, Web API, API RESTful, middleware, JWT, POO, etc... "],
+            "icons": ["logos:php", "logos:laravel", "logos:jwt-icon"]
+        },
+        {
+            "title": "Data Bases", 
+            "desc": ["MySql, phpMyAdmin, DBeaver, XAMPP."],
+            "icons": ["logos:mysql", "devicon:dbeaver", "simple-icons:phpmyadmin", "logos:xampp"]
+        },
+        {
+            "title": "Assembly, C, C++", 
+            "desc": ["Arduino, MikroC, MPLAB® X IDE, STM32CubeIDE, PSoC creator IDE. "],
+            "icons": ["file-icons:assembly-avr", "logos:c", "logos:c-plusplus"]
+        },
+        {
+            "title": "Electronics",  
+            "desc": ["Electronic Instrumentation, Soldering, AT Command, UART, JTAG, I²C, CAN Bus, RFFE, SPI, ISP, Programming, etc..", "Arduino, PIC, ESP-32, Intel® Galileo, STM32, Raspberry pi."],
+            "icons": ["logos:arduino", "logos:raspberry-pi", "simple-icons:proteus", "flat-color-icons:electronics"]
+        },
+        {
+            "title": "DevOps", 
+            "desc": ["Git, GitHub Actions. "],
+            "icons": ["devicon:git", "logos:github-octocat"]
+        },
+        {
+            "title": "Tools", 
+            "desc": ["Terminal de Linux, Mac OS y PowerShell"],
+            "icons": ["mdi-light:console", "devicon:npm-wordmark"]
+        },
+        {
+            "title": "SDLC", 
+            "desc": ["Agile Scrum."],
+            "icons": ["simple-icons:scrumalliance"]
+        }
+    ]
+}
