@@ -6,4 +6,3 @@ export { ContactPage } from "./contact/ContactPage";
 export { PortfolioPage } from "./portfolio/PortfolioPage";
 export { ResumePage } from "./resumen/ResumePage";
 export { Navbar } from "./ui/Navbar";
-export { ProjectPage } from "./projects/ProjectPage";

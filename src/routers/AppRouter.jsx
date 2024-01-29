@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import ScrollToTop from "../helpers/ScrollToTop";
 import { ViewProvider } from "../helpers/ViewProvider";
@@ -12,7 +12,6 @@ import {
   AboutPage,
   Navbar,
   Footer,
-  ProjectPage,
   Themes,
 } from "../pages";
 
@@ -26,7 +25,6 @@ export function AppRouter() {
           <ScrollToTop />
           <Routes>
             <Route path={"/portafolio/project"} element={<PortfolioPage />} />
-            <Route path="/portafolio/project/:pageId" element={<ProjectPage />} />
             <Route path={"/portafolio/resume"} element={<ResumePage />} />
             <Route path={"/portafolio/blog"} element={<BlogPage />} />
             <Route path={"/portafolio/contact"} element={<ContactPage />} />
