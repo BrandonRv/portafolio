@@ -29,7 +29,7 @@ export function Projects() {
             ))}
           </div>
           <div className="text-center py-3">
-            <NavLink idde="/portafolio/project" to="/portafolio/project" className="btn btn-primary" onClick={handleLinkClick} >
+            <NavLink idde="/portfolio/project" to="/portfolio/project" className="btn btn-primary" onClick={handleLinkClick} >
               <i className="fas fa-arrow-alt-circle-right me-2"></i>&#160;&#160;
               Ver Portafolio
             </NavLink>

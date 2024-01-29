@@ -2,7 +2,6 @@ import { React } from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import ScrollToTop from "../helpers/ScrollToTop";
 import { ViewProvider } from "../helpers/ViewProvider";
-//import "../styles/theme-7.scss";
 import "animate.css";
 import {
   PortfolioPage,
@@ -12,11 +11,12 @@ import {
   AboutPage,
   Navbar,
   Footer,
+  //ProjectPage,
   Themes,
 } from "../pages";
 
 export function AppRouter() {
-  
+
   return (
     <BrowserRouter>
       <ViewProvider>
@@ -24,16 +24,17 @@ export function AppRouter() {
         <div className="main-wrapper">
           <ScrollToTop />
           <Routes>
-            <Route path={"/portafolio/project"} element={<PortfolioPage />} />
-            <Route path={"/portafolio/resume"} element={<ResumePage />} />
-            <Route path={"/portafolio/blog"} element={<BlogPage />} />
-            <Route path={"/portafolio/contact"} element={<ContactPage />} />
-            <Route path={"/portafolio"} element={<AboutPage />} />
-            <Route path="*" element={<Navigate to={"/portafolio"} replace />} />
+            <Route path={"/portfolio/project"} element={<PortfolioPage />} />
+            {/* <Route path="portfolio/project/:pageId" element={<ProjectPage />} /> */}
+            <Route path={"/portfolio/resume"} element={<ResumePage />} />
+            <Route path={"/portfolio/blog"} element={<BlogPage />} />
+            <Route path={"/portfolio/contact"} element={<ContactPage />} />
+            <Route path={"/portfolio"} element={<AboutPage />} />
+            <Route path="*" element={<Navigate to={"/portfolio"} replace />} />
           </Routes>
           <Footer />
-          <Themes />
         </div>
+        <Themes />
       </ViewProvider>
     </BrowserRouter>
   );

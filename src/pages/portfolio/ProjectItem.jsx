@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,11 +11,6 @@ SwiperCore.use([Autoplay]);
 
 export function ProjectItem({ datos }) {
   const { title, desc, client, image, icons, filters, projectId } = datos;
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate("/portafolio/project");
-  }, [image]);
 
   return (
     <div className={`isotope-item col-md-6 mb-5 ${filters}`}>
@@ -30,7 +25,7 @@ export function ProjectItem({ datos }) {
             >
               {image.map((imageSrc, index) => (
                 <SwiperSlide key={index}>
-                  <img src={`../${imageSrc}`} className="card-img" alt="image" />
+                  <img src={imageSrc} className="card-img" alt="image" />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -39,13 +34,12 @@ export function ProjectItem({ datos }) {
             <div className="card-body">
               <h5 className="card-title">
                 <a
-                  className="theme-link" //href="project.html"
+                  className="theme-link" 
                 >
                   {title}
                 </a>
               </h5>
               <p className="card-text">{desc}</p>
-
               <p
                 className="card-text"
                 style={{ display: "flex", justifyContent: "space-between" }}

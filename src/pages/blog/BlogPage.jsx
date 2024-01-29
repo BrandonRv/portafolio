@@ -6,15 +6,6 @@ const { blogs } = BlogsData;
 
 export function BlogPage() {
   document.title = "Brandon Rivera - Blog";
-  /*
-  {
-      "title" : "Top 3 JavaScript Frameworks",
-      "desc" : " Project intro lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis disparturient montes.",
-      "image" : "assets/images/blog/blog-post-thumb-card-1.jpg",
-      "url" : "blog",
-      "date": "01-01-2022"
-  }
-  */
 
   const [disable, setDisable] = React.useState(false);
 

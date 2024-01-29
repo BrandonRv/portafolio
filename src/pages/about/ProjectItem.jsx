@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules"; // Navigation,
-import { NavLink, useNavigate } from "react-router-dom";
+import { Autoplay } from "swiper/modules";
+import { NavLink } from "react-router-dom";
 import "swiper/css";
 //import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -12,18 +12,12 @@ SwiperCore.use([Autoplay]); // Navigation,
 
 export function ProjectItem({ datos }) {
   const { title, desc, client, image, icons, projectId } = datos;
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate("/portafolio");
-  }, [image]);
 
   return (
     <div className="col-md-6 mb-5">
       <div className="card project-card">
         <div className="row flex no-gutters">
           <div className="col-12 col-xl-12 pordebajoo">
-            {/* col-xl-5 card-img-holder */}
             <Swiper
               spaceBetween={5}
               slidesPerView={1}
@@ -33,16 +27,15 @@ export function ProjectItem({ datos }) {
             >
               {image.map((imageSrc, index) => (
                 <SwiperSlide key={index}>
-                  <img src={`./${imageSrc}`} className="card-img" alt="image" />
+                  <img src={imageSrc} className="card-img" alt="image" />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
           <div className="col-12">
-            {/* col-xl-7 */}
             <div className="card-body">
               <h5 className="card-title">
-                <NavLink to={projectId} className="theme-link">
+                <NavLink className="theme-link">
                   {title}
                 </NavLink>
               </h5>

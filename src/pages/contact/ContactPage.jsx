@@ -1,5 +1,5 @@
 import { React, useRef, useState } from "react";
-import { NavLink } from "react-router-dom"; // useNavigate
+import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import Links from "../../db/links.json";
@@ -16,8 +16,7 @@ export function ContactPage() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    setDisable(false);
+    setDisable(true);
 
     emailjs
       .sendForm(
@@ -179,11 +178,10 @@ export function ContactPage() {
                     <i className="fas fa-info-circle me-2 text-primary"></i>
                     ¿Quieres saber más sobre mí? Consulta la{" "}
                     <NavLink
-                      idde="/portafolio"
+                      idde="/portfolio"
                       className="text-link"
-                      to="/portafolio"
+                      to="/portfolio"
                       onClick={handleLinkClick}
-                      //target="_blank"
                     >
                       página principal.
                     </NavLink>{" "}

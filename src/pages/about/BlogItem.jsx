@@ -12,7 +12,6 @@ export function BlogItem({ datos }) {
   return (
     <div className="col-md-6 mb-5">
       <div className="card blog-post-card">
-        {/* <div className="ratio ratio-16x9"> */}
         <iframe
           height="315"
           src={preview}
@@ -29,7 +28,7 @@ export function BlogItem({ datos }) {
           </h5>
           <p className="card-text">{desc}</p>
           <p className="mb-0">
-            <NavLink idde="/portafolio/contact" className="text-link" to="/portafolio/contact" onClick={handleLinkClick}>
+            <NavLink idde="/portfolio/contact" className="text-link" to="/portfolio/contact" onClick={handleLinkClick}>
               {inter} &rarr;
             </NavLink>
           </p>

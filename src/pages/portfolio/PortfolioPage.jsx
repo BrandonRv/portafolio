@@ -15,7 +15,6 @@ export function PortfolioPage() {
     const filterItems = document.querySelectorAll("#filters .type");
 
     var iso = new isotope(isotopeContainer, {
-      // options
       itemSelector: ".isotope-item",
       layoutMode: "fitRows",
     });
@@ -54,9 +53,9 @@ export function PortfolioPage() {
             </p>
           </div>
           <NavLink
-            idde="/portafolio/contact"
+            idde="/portfolio/contact"
             className="btn btn-primary"
-            to="/portafolio/contact"
+            to="/portfolio/contact"
             onClick={handleLinkClick}
             //target="_blank"
           >
