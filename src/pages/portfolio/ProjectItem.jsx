@@ -30,7 +30,7 @@ export function ProjectItem({ datos }) {
             >
               {image.map((imageSrc, index) => (
                 <SwiperSlide key={index}>
-                  <img src={`.${imageSrc}`} className="card-img" alt="image" />
+                  <img src={`${imageSrc}`} className="card-img" alt="image" />
                 </SwiperSlide>
               ))}
             </Swiper>
