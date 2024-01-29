@@ -6,7 +6,7 @@
       "desc": "Full Stack que utiliza Laravel con middleware para el filtrado HTTP, JWT para la autenticación, y ofrece un perfil de usuario, un dashboard, y listados de roles, usuarios, páginas y bitácoras. El proyecto cuenta con las funcionalidades CRUD para cada módulo. El despliegue se hace solo en el frontend, y el backend se ejecuta en local.",
       "client": "Funval Internacional",
       "icons": ["logos:react", "logos:laravel", "logos:php", "logos:jwt-icon", "devicon:tailwindcss", "skill-icons:javascript", "logos:mysql", "devicon:git", "logos:github-octocat", "devicon:npm-wordmark"],
-      "image": ["./portafolio/assets/images/project/bitacora1.png", "./portafolio/assets/images/project/bitacora2.png", "./portafolio/assets/images/project/bitacora3.png", "./portafolio/assets/images/project/bitacora4.png", "./portafolio/assets/images/project/bitacora5.png", "./portafolio/assets/images/project/bitacora6.png", "./portafolio/assets/images/project/bitacora7.png", "./portafolio/assets/images/project/bitacora8.png"],
+      "image": ["portafolio/assets/images/project/bitacora1.png", "portafolio/assets/images/project/bitacora2.png", "portafolio/assets/images/project/bitacora3.png", "portafolio/assets/images/project/bitacora4.png", "portafolio/assets/images/project/bitacora5.png", "portafolio/assets/images/project/bitacora6.png", "portafolio/assets/images/project/bitacora7.png", "portafolio/assets/images/project/bitacora8.png"],
       "filters": "frontend backend"
     },
     {
@@ -15,7 +15,7 @@
       "desc": "Full Stack que utiliza PHP nativo con MVC y POO, autenticación con JWT, React, CSS y Tailwind CSS. El proyecto incluye funcionalidades CRUD, tablas relacionales, gestión de roles y permisos, listados de calificaciones, clases, maestros y alumnos, inscripciones y mensajería interna. El despliegue se realiza solo en el frontend, mientras que el backend se ejecuta en local.",
       "client": "Funval Internacional",
       "icons": ["logos:react", "logos:php", "logos:jwt-icon", "devicon:tailwindcss", "skill-icons:javascript", "logos:mysql", "devicon:git", "logos:github-octocat", "devicon:npm-wordmark"],
-      "image": ["./portafolio/assets/images/project/university1.png", "./portafolio/assets/images/project/university2.png", "./portafolio/assets/images/project/university3.png", "./portafolio/assets/images/project/university4.png", "./portafolio/assets/images/project/university5.png", "./portafolio/assets/images/project/university6.png", "./portafolio/assets/images/project/university7.png", "./portafolio/assets/images/project/university8.png", "./portafolio/assets/images/project/university9.png"],
+      "image": ["portafolio/assets/images/project/university1.png", "portafolio/assets/images/project/university2.png", "portafolio/assets/images/project/university3.png", "portafolio/assets/images/project/university4.png", "portafolio/assets/images/project/university5.png", "portafolio/assets/images/project/university6.png", "portafolio/assets/images/project/university7.png", "portafolio/assets/images/project/university8.png", "portafolio/assets/images/project/university9.png"],
       "filters": "frontend backend"
     },
     {
@@ -24,7 +24,7 @@
       "desc": "Muestra el clima actual y el pronóstico de 5 días de la localidad del usuario y de otras ciudades.",
       "client": "Funval Internacional",
       "icons": ["logos:react", "skill-icons:html", "skill-icons:css", "skill-icons:javascript", "logos:github-octocat", "devicon:npm-wordmark"],
-      "image": ["./portafolio/assets/images/project/weather1.png", "./portafolio/assets/images/project/weather2.png", "./portafolio/assets/images/project/weather3.png"],
+      "image": ["portafolio/assets/images/project/weather1.png", "portafolio/assets/images/project/weather2.png", "portafolio/assets/images/project/weather3.png"],
       "filters": "frontend"
     },
     {
@@ -33,7 +33,7 @@
       "desc": "Una web app que calcula la propina y divide la cuenta entre los comensales.",
       "client": "Funval Internacional",
       "icons": ["skill-icons:javascript", "skill-icons:html", "skill-icons:css", "logos:github-octocat"],
-      "image": ["./portafolio/assets/images/project/tip1.png", "./portafolio/assets/images/project/tip2.png", "./portafolio/assets/images/project/tip3.png"],
+      "image": ["portafolio/assets/images/project/tip1.png", "portafolio/assets/images/project/tip2.png", "portafolio/assets/images/project/tip3.png"],
       "filters": "frontend"
     },
     {
@@ -42,7 +42,7 @@
       "desc": "Un proyecto de electrónica que consiste en un microcontrolador atmel328p, un módulo gsm/gprs QuectelM95 y un sensor infrarrojo pasivo (PIR).",
       "client": "Independiente",
       "icons": ["logos:c-plusplus", "logos:arduino", "simple-icons:proteus", "flat-color-icons:electronics"],
-      "image": ["./portafolio/assets/images/project/quectel.jpg"],
+      "image": ["portafolio/assets/images/project/quectel.jpg"],
       "filters": "electronic"
     }
   ]
