@@ -1,6 +1,6 @@
 # DEMO
 
-- LINK DEPLOY: [app.netlify.com](https://gilded-kitsune-11adb6.netlify.app)
+- LINK DEPLOY: [app.netlify.com](https://baandoncv.netlify.app)
 
 
 # React + Vite
