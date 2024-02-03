@@ -1,14 +1,38 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import Links from "../../db/links.json";
 import foto from "../../assets/images/profile.png";
-import { React } from "react";
+import { React, useState, useRef } from "react";
 import { useViewContext } from "../../helpers/ViewProvider";
 const { links } = Links;
+import { motion } from 'framer-motion';
 
 export function Navbar() {
 
-  const { handleLinkClick, activeLinkId, handleDarkMode, darkMode } = useViewContext();
+  const { handleLinkClick, activeLinkId, handleDarkMode, darkMode, width } = useViewContext();
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const configPanelRef = useRef(null);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const panelVariants = {
+    open: {
+        y: '-100%',
+        transition: {
+            duration: 0.5,
+            ease: 'easeInOut',
+        },
+    },
+    closed: {
+        y: 0, 
+        transition: {
+            duration: 0.5,
+            ease: 'easeInOut',
+        },
+    },
+};
 
   return (
     <header className="header text-center">
@@ -20,17 +44,27 @@ export function Navbar() {
         </h1>
         <nav className="navbar navbar-expand-lg navbar-dark">
           <button
-            className="navbar-toggler"
+            id="buttonnavv"
+            className={`navbar-toggler ${isMenuOpen ? ' ' : 'collapsed'}`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navigation"
             aria-controls="navigation"
-            aria-expanded="false"
+            aria-expanded={`${isMenuOpen ? 'true' : 'false'}`} // Para Abrir el Menu
             aria-label="Toggle navigation"
+            onClick={toggleMenu}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div id="navigation" className="collapse navbar-collapse flex-column">
+          <motion.div
+                id="config-panel"
+                ref={configPanelRef}
+                initial="closed"
+                animate={isMenuOpen ? 'closed' : (width > 991 ? 'closed' : 'open')}
+                variants={panelVariants}
+                className={`collapse ${isMenuOpen ? "show" : " "} navbar-collapse flex-column`}
+            >
+          <div id="navigation" style={{ height: '748px', transition: "transform 0.5s ease-in-out" }} >
             <div className="profile-section pt-3 pt-lg-0">
               <div className="dark-mode-toggle rounded-circle mb-4">
                 <img
@@ -80,6 +114,7 @@ export function Navbar() {
                   className={activeLinkId && activeLinkId == "/portfolio" ? "" : "nav-link"}
                   onClick={handleLinkClick}
                   to="/portfolio"
+                  style={{ padding: "4px", margin: "4px", color: activeLinkId && activeLinkId == "/portfolio" ? (darkMode ? '' : 'black') : '' }}
                 >
                   <i className="fas fa-user fa-fw me-2"></i> About Me
                   <span className="sr-only">(current)</span>
@@ -91,6 +126,7 @@ export function Navbar() {
                   className={activeLinkId && activeLinkId == "/portfolio/project" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
                   to="/portfolio/project"
+                  style={{ padding: "4px", margin: "4px", color: activeLinkId && activeLinkId == "/portfolio/project" ? (darkMode ? '' : 'black') : '' }}
                 >
                   <i className="fas fa-laptop-code fa-fw me-2"></i> Project
                   <span className="sr-only">(current)</span>
@@ -102,6 +138,7 @@ export function Navbar() {
                   className={activeLinkId && activeLinkId === "/portfolio/resume" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
                   to="/portfolio/resume"
+                  style={{ padding: "4px", margin: "4px", color: activeLinkId && activeLinkId == "/portfolio/resume" ? (darkMode ? '' : 'black') : '' }}
                 >
                   <i className="fas fa-file-alt fa-fw me-2"></i> Resumen CV
                   <span className="sr-only">(current)</span>
@@ -110,7 +147,7 @@ export function Navbar() {
               <li className="nav-item">
                 <NavLink
                   idde="/portfolio/blog"
-                  style={{ padding: "5px", margin: "6px" }}
+                  style={{ padding: "4px", margin: "4px", color: activeLinkId && activeLinkId == "/portfolio/blog" ? (darkMode ? '' : 'black') : '' }}
                   className={activeLinkId && activeLinkId === "/portfolio/blog" ? "" : "nav-link active"}
                   onClick={handleLinkClick}
                   to="/portfolio/blog"
@@ -125,6 +162,7 @@ export function Navbar() {
                   className={activeLinkId && activeLinkId === "/portfolio/contact" ? "" : "nav-link active"}
                   to="/portfolio/contact"
                   onClick={handleLinkClick}
+                  style={{ padding: "4px", margin: "4px", color: activeLinkId && activeLinkId == "/portfolio/contact" ? (darkMode ? '' : 'black') : '' }}
                 >
                   <i className="fas fa-envelope-open-text fa-fw me-2"></i>{" "}
                   Contact
@@ -144,7 +182,7 @@ export function Navbar() {
             <div className="dark-mode-toggle text-center w-100">
               <hr className="mb-4" />
               <h4 className="toggle-name mb-3 ">
-                <i className="fas fa-adjust me-1"></i>Dark Mode
+                <i className="fas fa-adjust me-1"></i>&#160; Modo Oscuro
               </h4>
               <input
                 className="toggle"
@@ -159,6 +197,7 @@ export function Navbar() {
               ></label>
             </div>
           </div>
+          </motion.div>
         </nav>
       </div>
     </header>

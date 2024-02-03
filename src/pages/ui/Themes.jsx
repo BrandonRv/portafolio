@@ -37,11 +37,10 @@ export function Themes() {
                 initial="closed"
                 animate={isPanelOpen ? 'closed' : 'open'}
                 variants={panelVariants}
-                className={`config-panel panel-inner d-none d-lg-block ${isPanelOpen ? 'config-panel-open' : 'config-panel-hide'
-                    }`}
+                className={`config-panel panel-inner d-lg-block ${isPanelOpen ? 'config-panel-open' : 'config-panel-hide'}`}
             >
                 <div className="panel-inner">
-                    <a onClick={togglePanel} className="config-trigger text-center" href="#">
+                    <a onClick={togglePanel} className="config-trigger text-center" href="#" style={{ transition: "transform 0.5s ease-in-out", transform: isPanelOpen ? "translateY(0)" : "translateY(-82%)" }}>
                         <i className="fas fa-cog mx-auto" data-fa-transform="down-6"></i>
                     </a>
                     {isPanelOpen && (

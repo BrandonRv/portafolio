@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useLayoutEffect } from "react";
 
 const ViewContext = createContext();
 
@@ -13,6 +13,7 @@ export const ViewProvider = ({ children }) => {
   const documentBody = document.getElementsByTagName("body")[0];
   const dMode = JSON.parse(localStorage.getItem("dark-mode")) === true;
   const [darkMode, setDarkMode] = useState(!dMode);
+  const [width, setWidth] = useState(window.innerWidth);
   const location = useLocation();
 
   const handleThemeClick = async (e) => {
@@ -60,8 +61,17 @@ export const ViewProvider = ({ children }) => {
     refresh();
   }, [activeLinkId])
 
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   const contextValue = {
+    width,
     handleLinkClick,
     activeLinkId,
     handleThemeClick,

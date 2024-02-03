@@ -37,12 +37,57 @@
       "filters": "frontend"
     },
     {
+      "projectId": "MiniProyecto-N3",
+      "title": "Login, Registro, Perfil de Usuario.", 
+      "desc": "Full stack que utiliza PHP, en el que creas registro de nuevos usuarios, loguearte y cambiar datos de los usuarios, implementa variables de sesión.",
+      "client": "Funval Internacional",
+      "icons": ["logos:php", "skill-icons:html", "skill-icons:css", "skill-icons:javascript", "devicon:tailwindcss", "logos:mysql", "devicon:git", "logos:github-octocat", "devicon:npm-wordmark"],
+      "image": ["/assets/images/project/mini1.png", "/assets/images/project/mini2.png", "/assets/images/project/mini3.png", "/assets/images/project/mini4.png", "/assets/images/project/mini5.png"],
+      "filters": "frontend backend"
+    },
+    {
+      "projectId": "Poke-API-Practica11",
+      "title": "Comsumiendo PokéAPI.", 
+      "desc": "Frontend para consumir una API, donde se muestran todos los pokédex y puedes ver sus habilidades.",
+      "client": "Funval Internacional",
+      "icons": ["logos:react", "skill-icons:html", "skill-icons:css", "skill-icons:javascript", "logos:github-octocat", "devicon:npm-wordmark"],
+      "image": ["/assets/images/project/poke1.png", "/assets/images/project/poke2.png", "/assets/images/project/poke3.png"],
+      "filters": "frontend"
+    },    
+    {
+      "projectId": "practica-9",
+      "title": "Diseño Figma Responsive.", 
+      "desc": "Una práctica Frontend de un diseño Figma.",
+      "client": "Funval Internacional",
+      "icons": ["logos:react", "skill-icons:html", "skill-icons:css", "skill-icons:javascript", "logos:github-octocat", "devicon:npm-wordmark"],
+      "image": ["/assets/images/project/figma1.png", "/assets/images/project/figma2.png"],
+      "filters": "frontend"
+    },
+    {
+      "projectId": "Mini_P_N4_RestFULL",
+      "title": "Una API RESTfull en Laravel, Testing con Postman", 
+      "desc": "Una API RESTful elaborada con Laravel, que posee todos los CRUD, así como roles para alumnos, profesores y administradores. Esta API permite tomar asistencias y ver todo el CRUD de materias de un Colegio o Universidad. Está documentada con Postman.",
+      "client": "Funval Internacional",
+      "icons": ["logos:laravel", "logos:php", "logos:mysql", "devicon:git", "logos:github-octocat", "devicon:npm-wordmark"],
+      "image": ["/assets/images/project/apiregistro.png"],
+      "filters": "backend"
+    }, 
+    {
       "projectId": "AlarmarQuecteln95",
       "title": "Sistema de Alarma 2G.", 
       "desc": "Un proyecto de electrónica que consiste en un microcontrolador atmel328p, un módulo gsm/gprs QuectelM95 y un sensor infrarrojo pasivo (PIR).",
       "client": "Independiente",
       "icons": ["logos:c-plusplus", "logos:arduino", "simple-icons:proteus", "flat-color-icons:electronics"],
       "image": ["/assets/images/project/quectel.jpg"],
+      "filters": "electronic"
+    },    
+    {
+      "projectId": "ProgramaLavadora",
+      "title": "Gestión y control para una lavadora.", 
+      "desc": "Control electrónico para lavadoras. El sistema de hidronivel está gestionado a través de un sensor de presión diferencial MPX2010DP. Se utilizó un OpAmp LM358P para manejar el rango de la señal. El rango de salida va desde 0 V hasta 5 V. todo está elaborado con un microcontrolador atmega328p. También se usó un display 20x4 que se comunica a través de un bus I2C.",
+      "client": "Independiente",
+      "icons": ["logos:c-plusplus", "logos:arduino", "simple-icons:proteus", "flat-color-icons:electronics"],
+      "image": ["/assets/images/project/lava1.png", "/assets/images/project/lava2.png"],
       "filters": "electronic"
     }
   ]
